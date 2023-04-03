@@ -1,3 +1,5 @@
+import { MainDiv } from "./totalStyle";
+
 export const TotalShopping = ({ removeAllProductFromShopping, shoppingList }) => {
   const totalPrice = () => {
     const mapResult = shoppingList.map((product) => {
@@ -10,10 +12,18 @@ export const TotalShopping = ({ removeAllProductFromShopping, shoppingList }) =>
   };
 
   return (
-    <div>
-      <h3>Total</h3>
-      <nav>R${totalPrice()} </nav>
-      <button onClick={() => removeAllProductFromShopping()}>Remover todos</button>
-    </div>
+    <>
+      {totalPrice() == 0 ? (
+        <p></p>
+      ) : (
+        <MainDiv>
+          <div>
+            <nav>Total</nav>
+            <p>R${totalPrice().toFixed(2)} </p>
+          </div>
+          <button onClick={() => removeAllProductFromShopping()}>Remover todos</button>
+        </MainDiv>
+      )}
+    </>
   );
 };

@@ -14,7 +14,6 @@ export const StyledButtonGreen = styled.button`
   font-weight: 600;
   font-size: 14px;
   font-family: "Inter", sans-serif;
-  
 
   :hover {
     border: 2px solid #93d7af;

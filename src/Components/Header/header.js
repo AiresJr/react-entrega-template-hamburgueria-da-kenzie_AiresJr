@@ -1,18 +1,26 @@
 import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
+  position: relative;
   display: flex;
-  flex-direction: row;
-  height: 80px;
+  flex-direction: column;
+  height: 150px;
   background: #f5f5f5;
-  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
   align-items: center;
-  padding: 0 120px 0 110px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    background: #f5f5f5;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px 0 110px;
+  }
 
   input {
-    position: absolute;
-    left: 1350px;
-    top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,6 +32,7 @@ export const HeaderStyle = styled.header`
     background: #ffffff;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
+    margin-top: 40px;
   }
 
   input::placeholder {
@@ -39,7 +48,8 @@ export const HeaderStyle = styled.header`
 
   button {
     position: relative;
-    right: 38px;
+    left: 250px;
+    bottom: 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -64,4 +74,9 @@ export const HeaderStyle = styled.header`
     border-radius: 8px;
     background: #93d7af;
   }
-`
+
+  img {
+    width: 158.94px;
+    height: 36.83px;
+  }
+`;

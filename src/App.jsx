@@ -67,7 +67,6 @@ function App() {
               setSearch={setSearch}
             />
           </Left>
-
           <Right>
             <Shopping shoppingList={shoppingList} removeProductFromShopping={removeProductFromShopping} />
             <TotalShopping removeAllProductFromShopping={removeAllProductFromShopping} shoppingList={shoppingList} />

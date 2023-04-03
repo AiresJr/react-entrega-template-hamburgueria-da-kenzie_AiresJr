@@ -1,5 +1,5 @@
 import { CardStyle } from "./cardStyle";
-import {  ProductCard} from "./ProductCard";
+import { ProductCard } from "./ProductCard";
 
 export const Products = ({ products, addProductToShopping, searchFiltred, search, setSearch }) => {
   const currentProductList = search !== "" ? searchFiltred : products;
