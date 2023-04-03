@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../../assets/Logo.svg";
+import logo from "../../assets/logo.svg";
 import { HeaderStyle } from "./header";
 
 export const Header = ({ setSearch }) => {
@@ -13,7 +13,7 @@ export const Header = ({ setSearch }) => {
 
   return (
     <HeaderStyle>
-      <img src={Logo} alt="Logo" />
+      <img src={logo} alt="logo" />
       <form onSubmit={submit}>
         <input value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type="text" placeholder="Digitar Pesquisa" />
         <button type="submit" placeholder="Digitar Pesquisa">
