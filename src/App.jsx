@@ -6,6 +6,8 @@ import { TotalShopping } from "./Components/TotalShopping";
 import { api } from "./services/api";
 import { GlobalStyle } from "./styles/global";
 import { FlexBox, Left, MainStyle, Right } from "./styles/main";
+import { toast } from 'react-toastify';
+
 
 function App() {
   const shoppingListLocalStorage = localStorage.getItem("@SHOPPINGLIST");
@@ -21,18 +23,21 @@ function App() {
     const newShoppingList = [...shoppingList, product];
     if (!shoppingList.some((products) => products.id === product.id)) {
       setShoppingList(newShoppingList);
+      toast.success("Produto adicionado!", {autoClose: 1000})
     } else {
-      alert("Esse produto ja existe!");
+      toast.error("Esse produto ja existe!", {autoClose: 2000});
     }
   };
 
   const removeProductFromShopping = (productId) => {
     const newShoppingList = shoppingList.filter((product) => product.id !== productId);
     setShoppingList(newShoppingList);
+    toast.success("Produto removido!", {autoClose: 1000});
   };
 
   const removeAllProductFromShopping = () => {
     setShoppingList([]);
+    toast.success("Todos os produtos foram removidos!", {autoClose: 2000});
   };
 
   const loadProducts = async () => {
