@@ -1,4 +1,4 @@
-import { DivBox, DivButton, DivTitle, DivTitleSecondary, LiStyle, UlStyle } from "./shoppingStyle";
+import { DivBox, DivButton, DivTitle, DivTitleSecondary, ListStyle, CardStyle } from "./shoppingStyle";
 
 export const Shopping = ({ shoppingList, removeProductFromShopping }) => {
   return (
@@ -8,9 +8,9 @@ export const Shopping = ({ shoppingList, removeProductFromShopping }) => {
           <DivTitle>
             <h2>Carrinho de Compras</h2>
           </DivTitle>
-          <UlStyle>
+          <CardStyle>
             {shoppingList.map((product) => (
-              <LiStyle key={product.id}>
+              <ListStyle key={product.id}>
                 <img src={product.img} alt={product.name} />
                 <DivBox>
                   <DivButton>
@@ -19,9 +19,9 @@ export const Shopping = ({ shoppingList, removeProductFromShopping }) => {
                   </DivButton>
                   <nav>{product.category}</nav>
                 </DivBox>
-              </LiStyle>
+              </ListStyle>
             ))}
-          </UlStyle>
+          </CardStyle>
         </>
       ) : (
         <DivTitleSecondary>

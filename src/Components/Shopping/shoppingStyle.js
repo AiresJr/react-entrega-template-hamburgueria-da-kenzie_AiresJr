@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const UlStyle = styled.ul`
+export const CardStyle = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -16,7 +16,7 @@ export const UlStyle = styled.ul`
   }
 `;
 
-export const LiStyle = styled.li`
+export const ListStyle = styled.li`
   display: flex;
   flex-direction: row;
   gap: 10px;
