@@ -44,7 +44,7 @@ export const CardStyle = styled.ul`
   h3,
   div {
     margin-top: 10px;
-    padding-left: 21px;
+    padding-left: 12px;
   }
 
   h2 {
