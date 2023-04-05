@@ -10,7 +10,7 @@ export const HeaderStyle = styled.header`
   padding-bottom: 15px;
   align-items: center;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 851px) {
     display: flex;
     flex-direction: row;
     height: 80px;
@@ -18,6 +18,7 @@ export const HeaderStyle = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 120px 0 110px;
+    width: 100%;
   }
 
   input {
@@ -79,4 +80,17 @@ export const HeaderStyle = styled.header`
     width: 158.94px;
     height: 36.83px;
   }
+
+  @media (max-width: 380px){
+    button{
+      left: 150px;
+      width: 90px;
+    }
+
+    input{
+      width:250px;
+    }
+
+  }
+
 `;

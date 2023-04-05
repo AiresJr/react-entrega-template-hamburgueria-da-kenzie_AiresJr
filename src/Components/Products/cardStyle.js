@@ -24,11 +24,12 @@ export const CardStyle = styled.ul`
 
   li {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     box-sizing: border-box;
     width: 300px;
     height: 346px;
-    gap: 8px;
+    
     background: #ffffff;
     border: 2px solid #e0e0e0;
     border-radius: 5px;
